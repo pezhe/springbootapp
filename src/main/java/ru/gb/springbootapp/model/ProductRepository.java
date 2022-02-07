@@ -26,4 +26,8 @@ public class ProductRepository {
         productList.add(product);
     }
 
+    public void remove(long id) {
+        get(id).ifPresent(productList::remove);
+    }
+
 }

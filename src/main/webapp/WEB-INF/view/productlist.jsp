@@ -14,14 +14,13 @@
         </tr>
         <c:forEach var="product" items="${list}">
             <tr>
-                <td>${product.id}</td>
+                <td><a href="/products/${product.id}">${product.id}<a/></td>
                 <td>${product.title}</td>
                 <td>${product.cost}</td>
             </tr>
         </c:forEach>
     </table>
     <br>
-<c:url var="addProduct" value="/products/add"/>
-<a href="${addProduct}">ADD<a/>
+<a href="/products/add">ADD<a/>
 </body>
 </html>
