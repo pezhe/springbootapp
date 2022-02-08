@@ -5,7 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import ru.gb.springbootapp.model.Product;
-import ru.gb.springbootapp.model.ProductRepository;
+import ru.gb.springbootapp.dao.ProductRepository;
 
 @Controller
 @RequiredArgsConstructor
@@ -35,7 +35,7 @@ public class RepositoryController {
 
     @GetMapping(path = "/{id}")
     public String showProduct(Model model, @PathVariable long id) {
-        model.addAttribute("product", repo.get(id).get());
+        model.addAttribute("product", repo.get(id));
         return "product";
     }
 
