@@ -6,6 +6,14 @@
 </head>
 <body>
 <h1>Product List</h1>
+<c:url var="sortAscUrl" value="/products/">
+<c:param name="sort" value="asc"/>
+</c:url>
+<a href="${sortAscUrl}">SORT ASC</a>
+<c:url var="sortDescUrl" value="/products/">
+<c:param name="sort" value="desc"/>
+</c:url>
+<a href="${sortDescUrl}">SORT DESC</a>
 <table>
         <tr>
             <th>ID</th>

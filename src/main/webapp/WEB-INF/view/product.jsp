@@ -15,6 +15,11 @@
 </c:url>
 <a href="${removeUrl}">REMOVE</a>
 <br>
+<c:url var="editUrl" value="/products/edit">
+<c:param name="id" value="${product.id}"/>
+</c:url>
+<a href="${editUrl}">EDIT</a>
+<br>
 <a href="/products/">BACK</a>
 </body>
 </html>

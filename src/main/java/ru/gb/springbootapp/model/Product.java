@@ -13,7 +13,6 @@ import java.time.LocalDate;
 
 @Entity
 @Table(name = "product")
-@NamedQuery(name = "findById", query = "select p from Product p where p.id = :id")
 public class Product {
 
     @Id
